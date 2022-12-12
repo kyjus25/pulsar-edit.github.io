@@ -14,7 +14,7 @@ import { footer } from "./footer.js";
 
 export default defineUserConfig({
   lang: 'en-US',
-  //title: 'Pulsar',
+  title: 'Pulsar',
   description: 'A Community-led Hyper-Hackable Text Editor',
   alias: {
     '@images': path.resolve(__dirname, '../../node_modules/.github/images')

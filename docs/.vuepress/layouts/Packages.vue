@@ -1,16 +1,21 @@
 <script setup>
+    import { useSiteData } from "@vuepress/client";
     import CommonWrapper from '@theme-hope/components/CommonWrapper.js';
     import PackageCard from '../components/PackageCard.vue';
     // TODO: API needs cors - Justin White <kyjus25>
     // https://api.pulsar-edit.dev/api/packages/featured
     import featured from './featured.json';
-    console.log(featured);
+
+    const { title } = useSiteData().value;
+
+    document.title = `Featured Packages | ${title}`;
+
+    // console.log(featured);
 
     let suggestions = null;
-    let text = '';
 
     const suggest = (evt) => {
-        console.log('suggesst');
+        console.log('suggest');
         const query = evt.target.value;
         if (!query || query.length < 3) { suggestions = null; return }
         console.log(query);

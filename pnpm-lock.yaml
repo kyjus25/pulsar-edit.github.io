@@ -17,12 +17,15 @@ specifiers:
   remark-preset-lint-recommended: ^6.1.2
   remark-preset-prettier: ^2.0.1
   vue: ^3.2.45
+  vue-router: ^4.1.6
   vuepress: 2.0.0-beta.58
   vuepress-theme-hope: 2.0.0-beta.141
 
 dependencies:
   .github: github.com/pulsar-edit/.github/3ccfc937f71da932f1e29e2689aef46be629e119
+  markdown-it: 13.0.1
   pulsar-assets: github.com/pulsar-edit/pulsar-assets/8fb8c787c296b789d5eea8dd65ea20c7a2af759d
+  vue-router: 4.1.6_vue@3.2.45
   vuepress-theme-hope: 2.0.0-beta.141_vuepress@2.0.0-beta.58
 
 devDependencies:
@@ -31,7 +34,6 @@ devDependencies:
   '@vuepress/utils': 2.0.0-beta.58
   husky: 8.0.2
   lint-staged: 13.1.0
-  markdown-it: 13.0.1
   prettier: 2.8.1
   remark-cli: 11.0.0
   remark-lint: 9.1.1
