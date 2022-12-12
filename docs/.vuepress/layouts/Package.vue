@@ -7,8 +7,7 @@
     const route = useRoute()
     console.log('route.params', route.params);
     console.log('route.query', route.query);
-    console.log(featured[0]);
-    console.log(md);
+    const item = featured[route.params.id];
     
 </script>
 
@@ -16,12 +15,10 @@
     <CommonWrapper>
         <main class="page" id="main-content">
             <div class="page-title">
-                <PackageCard :item="featured[0]" :link="false" />
+                <br />
+                <PackageCard :item="item" :link="false" />
             </div>
-            <div class="theme-hope-content">
-                <p>Package layout working!</p>
-                {{featured[0].readme}}
-            </div>
+            <div class="theme-hope-content" v-html="md().render(item.readme)"></div>
         </main>
     </CommonWrapper>
 </template>

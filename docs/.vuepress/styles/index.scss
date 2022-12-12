@@ -96,6 +96,11 @@ html[data-theme=dark] .custom-container.details th {
   width: 100%;
 }
 
+.packages .search-box .suggestions {
+  // This is weird. - Justin White <kyjus25>
+  width: calc(100% - 0.9em);
+}
+
 .packages .num-wrapper > div {
   flex: 1;
 }

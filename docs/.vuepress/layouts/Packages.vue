@@ -5,17 +5,36 @@
     // https://api.pulsar-edit.dev/api/packages/featured
     import featured from './featured.json';
     console.log(featured);
+
+    // let suggestions = null;
+
+    // const suggest = (evt) => {
+    //     const query = evt.target.value;
+    //     evt.preventDefault();
+    //     if (!query || query.length < 3) { suggestions = null; return }
+    //     console.log(query);
+    // }
 </script>
 
 <template>
+    <input type="text" placeholder="Search Packages..." style="margin-top: 100px;"/>
     <CommonWrapper>
+        
         <div class="page blog packages">
             <div class="blog-page-wrapper">
                 <main class="blog-main" id="main-content">
                     <div class="page-title">
+                        
                         <h1>Featured Packages</h1>
-                        <form class="search-box" role="search">
-                            <input type="search" placeholder="Search Packages..." autocomplete="off" spellcheck="false">
+                        
+                        <form class="search-box-custom">
+                           
+                            <ul v-if="suggestions?.length > 0" class="suggestions">
+                                <li v-for="item in suggestions"><a href="#">{{item.name}}</a></li>
+                            </ul>
+                            <ul v-if="suggestions?.length === 0" class="suggestions">
+                                <li>No results found</li>
+                            </ul>
                         </form>
                     </div>
                     <div class="theme-hope-content">
