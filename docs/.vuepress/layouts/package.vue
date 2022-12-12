@@ -1,7 +1,9 @@
 <script setup>
     import CommonWrapper from '@theme-hope/components/CommonWrapper.js';
-    import Sidebar from '@theme-hope/modules/sidebar/components/Sidebar.js';
-    import BreadCrumb from '@theme-hope/components/BreadCrumb.js';
+    import { useRoute } from 'vue-router';
+    const route = useRoute()
+    console.log('route.params', route.params);
+    console.log('route.query', route.query);
 </script>
 
 <template>
