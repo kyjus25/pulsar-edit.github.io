@@ -6,29 +6,26 @@
     import featured from './featured.json';
     console.log(featured);
 
-    // let suggestions = null;
+    let suggestions = null;
+    let text = '';
 
-    // const suggest = (evt) => {
-    //     const query = evt.target.value;
-    //     evt.preventDefault();
-    //     if (!query || query.length < 3) { suggestions = null; return }
-    //     console.log(query);
-    // }
+    const suggest = (evt) => {
+        console.log('suggesst');
+        const query = evt.target.value;
+        if (!query || query.length < 3) { suggestions = null; return }
+        console.log(query);
+    }
 </script>
 
 <template>
-    <input type="text" placeholder="Search Packages..." style="margin-top: 100px;"/>
     <CommonWrapper>
-        
         <div class="page blog packages">
             <div class="blog-page-wrapper">
                 <main class="blog-main" id="main-content">
                     <div class="page-title">
-                        
                         <h1>Featured Packages</h1>
-                        
-                        <form class="search-box-custom">
-                           
+                        <form class="search-box">
+                            <input type="text" @input="event => suggest(event)" placeholder="Search Packages..." />
                             <ul v-if="suggestions?.length > 0" class="suggestions">
                                 <li v-for="item in suggestions"><a href="#">{{item.name}}</a></li>
                             </ul>
@@ -39,7 +36,7 @@
                     </div>
                     <div class="theme-hope-content">
                         <div id="article-list" class="article-wrapper" style="transition: transform 0.25s ease-in-out 0.24s, opacity 0.25s ease-in-out 0.24s; transform: translateY(0px); opacity: 1;">
-                            <PackageCard v-for="item in featured" :item="item"  />
+                            <PackageCard v-for="item in featured" :item="item" :link="true" />
                         </div>
                     </div>
                 </main>

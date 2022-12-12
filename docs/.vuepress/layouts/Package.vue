@@ -7,7 +7,7 @@
     const route = useRoute()
     console.log('route.params', route.params);
     console.log('route.query', route.query);
-    const item = featured[route.params.id];
+    const item = featured.find(i => i.name === route.params.id);
     
 </script>
 
@@ -18,7 +18,7 @@
                 <br />
                 <PackageCard :item="item" :link="false" />
             </div>
-            <div class="theme-hope-content" v-html="md().render(item.readme)"></div>
+            <div v-if="item && item.readme" class="theme-hope-content" v-html="md().render(item.readme)"></div>
         </main>
     </CommonWrapper>
 </template>
