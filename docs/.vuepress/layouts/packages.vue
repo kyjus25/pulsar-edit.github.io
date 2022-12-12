@@ -20,7 +20,7 @@
                     </div>
                     <div class="theme-hope-content">
                         <div id="article-list" class="article-wrapper" style="transition: transform 0.25s ease-in-out 0.24s, opacity 0.25s ease-in-out 0.24s; transform: translateY(0px); opacity: 1;">
-                            <PackageCard v-for="item in featured" :item="item" :link="false"  />
+                            <PackageCard v-for="item in featured" :item="item"  />
                         </div>
                     </div>
                 </main>

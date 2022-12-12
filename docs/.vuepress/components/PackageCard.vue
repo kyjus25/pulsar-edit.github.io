@@ -1,10 +1,11 @@
 <script setup>
     const {item, link} = defineProps(['item', 'link']);
+    console.log(link);
 </script>
 
 <template>
-    <article class="article" vocab="https://schema.org/" typeof="Article" style="transition: transform 0.25s ease-in-out 0s, opacity 0.25s ease-in-out 0s; transform: translateY(0px); opacity: 1;">
-        <a href="/blog/20221208-Daeraxa-DistroTubeVideo.html" :style="{pointerEvents: link === true}">
+    <article class="article package-card" vocab="https://schema.org/" typeof="Article" style="transition: transform 0.25s ease-in-out 0s, opacity 0.25s ease-in-out 0s; transform: translateY(0px); opacity: 1;">
+        <a :href="link === true ? '/blog/20221208-Daeraxa-DistroTubeVideo.html' : '#'">
             <header class="title">
                 <span property="headline">{{item.name}}</span>
             </header>
