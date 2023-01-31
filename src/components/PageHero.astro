@@ -2,6 +2,6 @@
 const {pathname} = Astro.url;
 ---
 
-<div id="page-hero" class={`${pathname === '/' ? 'hidden h-[calc(100vh-68px)]' : 'flex mt-12'} items-center justify-end flex-col relative top-4 animate-fadeUp`}>
+<div id="page-hero" class={`${pathname === '/' ? 'hidden h-[calc(100vh-68px)] top-4 animate-fadeUp' : 'flex mt-12'} items-center justify-end flex-col relative`}>
     <img src="/text-only-light.svg" class="max-w-sm mb-12 border-2 p-3" />
 </div>
