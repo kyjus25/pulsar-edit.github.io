@@ -1,6 +1,6 @@
 ---
 title: About Us
-path: /about/
+layout: '../layouts/Page.astro'
 sitemap:
   priority: 0.8
   changefreq: "weekly"

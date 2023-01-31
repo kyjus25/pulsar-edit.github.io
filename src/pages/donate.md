@@ -1,6 +1,6 @@
 ---
 title: Donate to Pulsar
-path: /donate/
+layout: '../layouts/Page.astro'
 sitemap:
   priority: 0.8
   changefreq: "weekly"

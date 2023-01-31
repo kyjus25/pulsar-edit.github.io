@@ -1,6 +1,6 @@
 ---
 title: Community areas
-path: /community/
+layout: '../layouts/Page.astro'
 sitemap:
   priority: 0.9
   changefreq: "weekly"

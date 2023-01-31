@@ -1,6 +1,6 @@
 ---
 title: Pulsar Repositories
-path: /repos/
+layout: '../layouts/Page.astro'
 sitemap:
   priority: 0.4
 ---

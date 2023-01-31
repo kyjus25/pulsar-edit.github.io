@@ -9,7 +9,7 @@ import Base from "./Base.astro";
 ---
 
 <Base>
-    <div id="empty" class="h-[calc(100vh-90px)]" />
+    <div id="empty" class="h-[calc(100vh-68px)]" />
     <HomeHero />
     <PageHero />
     <header class="bg-white/10 flex items-center justify-between relative top-16 animate-fadeUpMore">
@@ -55,7 +55,7 @@ import Base from "./Base.astro";
     }
     init();
     document.addEventListener("scroll", (event) => {
-        if (window.scrollY > 200) {
+        if (window.scrollY > 300) {
             if (shown !== 'page') {
                 showPageHero();
             }
