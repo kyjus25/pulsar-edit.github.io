@@ -1,7 +1,6 @@
 ---
 title: Example post
 article: false
-pubDate: 2023-01-30
 ---
 <!--Everything below this line is the example post. The above is necessary just to hide it completely from the website-->
 ---

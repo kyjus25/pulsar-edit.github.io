@@ -1,0 +1,22 @@
+---
+import HomeHero from "../components/HomeHero.astro";
+import Nav from "../components/Nav.astro";
+import PageHero from "../components/PageHero.astro";
+import Prose from "../components/Prose.astro";
+import Socials from "../components/Socials.astro";
+import * as CONFIG from '../config.json';
+import Base from "./Base.astro";
+---
+
+<Base>
+    <PageHero />
+    <header class="bg-white/10 flex items-center justify-between relative top-16 animate-fadeUpMore">
+        <Nav />
+        <Socials />
+    </header>
+    <article class="bg-white p-16">
+        <Prose>
+            <slot />
+        </Prose>
+    </article>
+</Base>

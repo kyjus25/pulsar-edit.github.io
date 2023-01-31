@@ -1,7 +1,7 @@
 ---
 title: Featured on DistroTube!
 author: Daeraxa
-pubDate: 2022-12-08
+date: 2022-12-08
 category:
   - news
 tag:

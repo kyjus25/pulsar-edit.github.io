@@ -1,46 +1,68 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Pagination from '../components/Pagination.astro';
-import PostPreview from '../components/PostPreview.astro';
-
-import { SITE } from '../config';
-
-const allPosts = await Astro.glob('../pages/blog/*.md');
-
-allPosts.sort((a, b) => Date.parse(b.frontmatter.pubDate) - Date.parse(a.frontmatter.pubDate));
-
-const featured = allPosts.shift();
+import HomeHero from "../components/HomeHero.astro";
+import Nav from "../components/Nav.astro";
+import PageHero from "../components/PageHero.astro";
+import Prose from "../components/Prose.astro";
+import Socials from "../components/Socials.astro";
+import * as CONFIG from '../config.json';
+import Base from "./Base.astro";
 ---
 
-<Layout title={SITE.title} intro>
-  <div id="main">
-    <!-- Featured Post -->
-    <PostPreview
-      title={featured?.frontmatter.title || ''}
-      image={featured?.frontmatter.image || ''}
-      date={new Date(featured?.frontmatter.pubDate)}
-      summary={featured?.frontmatter.summary}
-      link={featured?.url || ''}
-      featured
-    />
+<Base>
+    <div id="empty" class="h-[calc(100vh-90px)]" />
+    <HomeHero />
+    <PageHero />
+    <header class="bg-white/10 flex items-center justify-between relative top-16 animate-fadeUpMore">
+        <Nav />
+        <Socials />
+    </header>
+    <article class="bg-white p-16">
+        <Prose>
+            <slot />
+        </Prose>
+    </article>
+</Base>
 
-    <!-- Posts -->
-    <section class="posts">
-      {
-        allPosts.map((p) => (
-          <PostPreview
-            title={p.frontmatter.title}
-            image={p.frontmatter.image}
-            date={new Date(p.frontmatter.pubDate)}
-            summary={p.frontmatter.summary}
-            link={p.url || ''}
-          />
-        ))
-      }
-    </section>
-
-    <Pagination />
-
-    <slot />
-  </div>
-</Layout>
+<script is:inline>
+    let shown = 'home';
+    const empty = document.getElementById('empty');
+    const homeHero = document.getElementById('home-hero');
+    const pageHero = document.getElementById('page-hero');
+    const init = () => {
+        empty.classList.add('hidden');
+        homeHero.classList.remove('hidden');
+        homeHero.classList.add('flex');
+    }
+    const showHomeHero = () => {
+        pageHero.classList.add('out');
+        setTimeout(() => {
+            pageHero.classList.remove('out');
+            pageHero.classList.add('hidden');
+            homeHero.classList.remove('hidden');
+            homeHero.classList.add('flex');
+            shown = 'home';
+        }, 1000)
+    }
+    const showPageHero = () => {
+        homeHero.classList.add('out');
+        setTimeout(() => {
+            homeHero.classList.remove('out');
+            homeHero.classList.add('hidden');
+            pageHero.classList.remove('hidden');
+            pageHero.classList.add('flex');
+            shown = 'page';
+        }, 1000)
+    }
+    init();
+    document.addEventListener("scroll", (event) => {
+        if (window.scrollY > 200) {
+            if (shown !== 'page') {
+                showPageHero();
+            }
+        } else {
+            if (shown !== 'home') {
+                showHomeHero();
+            }
+        }
+    });
+</script>

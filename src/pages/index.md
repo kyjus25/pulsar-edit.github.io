@@ -4,7 +4,7 @@ sitemap:
   changefreq: "daily"
 lang: en-us
 title: Home
-layout: "../layouts/Home.astro"
+layout: '../layouts/Home.astro'
 actions:
   - text: "Download 📥"
     link: "/download.html"

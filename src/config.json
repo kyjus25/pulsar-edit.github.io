@@ -1,0 +1,102 @@
+{
+    "title": "Pulsar",
+    "description": "A Community-led Hyper-Hackable Text Editor",
+    "logo": "logo-name-navbar-light.svg",
+    "background": "bg.jpg",
+    "socials": [
+        {
+            "text": "GitHub",
+            "icon": "fa-brands fa-github",
+            "link": "http://github.com/pulsar-edit"
+        },
+        {
+            "text": "Forum",
+            "icon": "fa-solid fa-comments",
+            "link": "https://github.com/orgs/pulsar-edit/discussions"
+        }
+    ],
+    "navigation": [
+        {
+            "text": "Home",
+            "icon": "solid fa-home",
+            "link": "/"
+        },
+        {
+            "text": "Download",
+            "icon": "solid fa-download",
+            "link": "/download/"
+        },
+        {
+            "text": "Docs",
+            "icon": "solid fa-file-lines",
+            "link": "/docs/"
+        },
+        {
+            "text": "About",
+            "children": [
+                {
+                    "text": "Repositories",
+                    "icon": "brands fa-github",
+                    "link": "/repos/"
+                },
+                {
+                    "text": "About Us",
+                    "icon": "solid fa-sun",
+                    "link": "/about/"
+                },
+                {
+                    "text": "Blog",
+                    "icon": "solid fa-blog",
+                    "link": "/article/"
+                },
+                {
+                    "text": "Community",
+                    "icon": "solid fa-user-group",
+                    "children": [
+                        {
+                            "text": "Community areas",
+                            "icon": "solid fa-house",
+                            "link": "/community/"
+                        },
+                        {
+                            "text": "Discussions",
+                            "icon": "solid fa-comments",
+                            "link": "https://github.com/orgs/pulsar-edit/discussions"
+                        },
+                        {
+                            "text": "Discord",
+                            "icon": "brands fa-discord",
+                            "link": "https://discord.gg/7aEbB9dGRT"
+                        },
+                        {
+                            "text": "Reddit",
+                            "icon": "brands fa-reddit",
+                            "link": "https://www.reddit.com/r/pulsaredit/"
+                        },
+                        {
+                            "text": "Mastodon",
+                            "icon": "brands fa-mastodon",
+                            "link": "https://fosstodon.org/@pulsaredit"
+                        }
+                    ]
+                },
+                {
+                    "text": "Donate",
+                    "icon": "solid fa-hand-holding-dollar",
+                    "link": "/donate/"
+                }
+            ]
+        },
+        {
+            "text": "Packages",
+            "icon": "solid fa-box-open",
+            "link": "https://web.pulsar-edit.dev/"
+        }
+    ],
+    "footer": [
+        {
+            "text": "Pulsar",
+            "children": []
+        }
+    ]
+}

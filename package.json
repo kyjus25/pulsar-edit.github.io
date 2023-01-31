@@ -1,7 +1,8 @@
 {
-  "name": "astro-massiely",
-  "version": "1.0.0",
-  "private": false,
+  "name": "pulsar-edit.github.io",
+  "type": "module",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,19 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^0.15.1",
-    "@astrojs/prefetch": "^0.1.2",
-    "@astrojs/rss": "^2.1.0",
-    "@astrojs/sitemap": "^1.0.1",
-    "@astrojs/svelte": "^2.0.1",
+    "@astrojs/tailwind": "^3.0.1",
+    "@tailwindcss/typography": "^0.5.9",
     "astro": "^2.0.4",
-    "astro-google-fonts-optimizer": "^0.2.2",
-    "date-fns": "^2.29.3",
-    "svelte": "^3.55.1"
-  },
-  "devDependencies": {
-    "prettier-plugin-astro": "^0.8.0",
-    "rollup": ">=3",
-    "sass": "^1.57.1"
+    "tailwindcss": "^3.0.24"
   }
 }

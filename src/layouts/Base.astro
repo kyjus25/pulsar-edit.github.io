@@ -1,0 +1,28 @@
+---
+---
+
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Source+Sans+Pro:wght@700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+		<title>Pulsar Edit</title>
+		<style>
+			.delay { animation-delay: 1s; } /* No way to do this in Tailwind */
+			.out {
+				animation-direction: reverse;
+				@apply animate-fadeUp;
+			}
+		</style>
+	</head>
+	<body class="font-body bg-canvas text-text">
+		<h1>Astro</h1>
+		<div class="container mx-auto">
+			<slot />
+		</div>
+		<div class="fixed -z-10 opacity-0 delay animate-fadeIn top-0 left-0 w-screen h-screen bg-backdrop bg-fixed 2xl:bg-large bg-top" />
+	</body>
+</html>

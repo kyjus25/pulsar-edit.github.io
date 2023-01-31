@@ -1,0 +1,11 @@
+---
+import * as CONFIG from '../config.json';
+---
+
+<div>
+    {CONFIG.socials.map(i => (
+        <a href={i.link} class="mr-6" target="_blank">
+            <i class={`${i.icon} text-white text-xl hover:text-primary transition-all`} />
+        </a>
+    ))}
+</div>

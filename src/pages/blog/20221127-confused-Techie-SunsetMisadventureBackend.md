@@ -1,7 +1,7 @@
 ---
 title: A Sunset and the Misadventures of a Backend
 author: confused-Techie
-pubDate: 2022-11-27
+date: 2022-11-27
 category:
   - dev
   - log

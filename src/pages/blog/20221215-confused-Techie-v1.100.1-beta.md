@@ -1,7 +1,7 @@
 ---
 title: Our First Release!
 author: confused-Techie
-pubDate: 2022-12-15
+date: 2022-12-15
 category:
   - dev
 tag:
