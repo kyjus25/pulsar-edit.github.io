@@ -5,6 +5,10 @@ import * as CONFIG from '../config.json';
 <div id="home-hero" class="hidden h-[calc(100vh-68px)] items-center justify-center flex-col relative top-4 animate-fadeUp">
     <img src="/text-only-light.svg" class="max-w-xl mb-6" />
     <p class="text-white/80 italic text-xl mb-4">{CONFIG.description}</p>
+    <a href="/download/" class="border-2 text-white p-3 mb-4 font-headings uppercase hover:bg-white/10 transition-all">
+        <i class="fa-solid fa-download mr-2" />
+        Download Now
+    </a>
     <i class="fa-solid fa-caret-down text-white text-5xl cursor-pointer animate-bounce" onclick="gotoContent()"></i>
 </div>
 
